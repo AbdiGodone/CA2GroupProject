@@ -3,7 +3,7 @@ package Ca2GroupProject;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Appointment {
+public class Appointment  implements  Comparable<Appointment>{
     private String patientFirstName;
     private String patientLastName;
     private LocalDate dateOfBirth;
@@ -93,4 +93,27 @@ public class Appointment {
     }
 
 
+    @Override
+    public int compareTo(Appointment o) {
+        if (this.triageLevel !=o.triageLevel){
+            return Integer.compare(this.triageLevel, o.triageLevel);
+        }
+        else {
+            return this.date.compareTo(o.date);
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Appointment{" +
+                "patientFirstName='" + patientFirstName + '\'' +
+                ", patientLastName='" + patientLastName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", issue='" + issue + '\'' +
+                ", date=" + date +
+                ", triageLevel=" + triageLevel +
+                ", DoctorFullName='" + DoctorFullName + '\'' +
+                '}';
+    }
 }
