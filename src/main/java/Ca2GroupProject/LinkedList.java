@@ -46,6 +46,38 @@ public class LinkedList {
 
         }
 
+        public Appointment Remove(int pos){
+
+
+            if (pos < 0 || pos>= numOfElements){
+                throw new IndexOutOfBoundsException();
+            }
+
+            Appointment deletedValue = null;
+
+            if (pos == 0 ){
+                Node current = head;
+                current = current.getNext();
+            } else if (pos > 0) {
+                Node current = head;
+
+                for (int i = 0; i < pos -1; i++) {
+                    current =  current.getNext();
+
+                }
+
+                deletedValue = current.getNext().getData();
+
+                current.setNext(current.getNext().getNext());
+                numOfElements--;
+
+
+
+            }
+            return deletedValue;
+
+        }
+
 
         protected static class Node {
             private Appointment data;
