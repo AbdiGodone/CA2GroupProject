@@ -11,11 +11,12 @@ public class LinkedList {
         }
 
 
+
         protected static class Node {
-            private int data;
+            private Appointment data;
             private Node next;
 
-            public Node(int data) {
+            public Node(Appointment data) {
                 this.data = data;
                 next = null;
             }
@@ -28,14 +29,14 @@ public class LinkedList {
                 return this.next;
             }
 
-            public void setData(int data) {
+            public void setData(Appointment data) {
                 this.data = data;
             }
 
-            public int getData() {
+            public Appointment getData() {
                 return this.data;
             }
         }
     }
 
-}
+
