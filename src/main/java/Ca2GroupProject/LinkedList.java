@@ -32,6 +32,20 @@ public class LinkedList {
 
         }
 
+        public Appointment get(int pos){
+            if (pos < 0 || pos >= numOfElements){
+                throw new IndexOutOfBoundsException();
+            }
+            Node current = head;
+
+            for (int i = 0; i < pos; i++) {
+                current = current.getNext();
+
+            }
+            return current.getData();
+
+        }
+
 
         protected static class Node {
             private Appointment data;
