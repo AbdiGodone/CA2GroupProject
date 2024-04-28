@@ -10,6 +10,27 @@ public class LinkedList {
             numOfElements = 0;
         }
 
+        public int size(){
+            return numOfElements;
+        }
+
+        public boolean isEmpty(){
+            return numOfElements == 0;
+        }
+
+        public void AddToStart(Appointment data){
+            Node node = new Node(data);
+
+            if (isEmpty()){
+              head = node;
+            }
+            else {
+                node.setNext(head);
+                head = node;
+            }
+            numOfElements++;
+
+        }
 
 
         protected static class Node {
