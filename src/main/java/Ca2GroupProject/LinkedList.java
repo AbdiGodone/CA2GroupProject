@@ -14,15 +14,20 @@ public class LinkedList {
             return numOfElements;
         }
 
-        public boolean isEmpty(){
+    /**
+     * checks if LinkedList is empty.
+     * @return true if the linkedList is empty, false otherwise
+     */
+    public boolean isEmpty(){
             return numOfElements == 0;
         }
 
-        public boolean isFull(){
-            return this.numOfElements ==
-        }
 
-        public void AddToStart(Appointment data){
+    /**
+     * adds an appointment to the start of the LinkedList.
+     * @param data the appointment to be added to the start of the LinkedList
+     */
+    public void AddToStart(Appointment data){
             Node node = new Node(data);
 
             if (isEmpty()){
@@ -36,7 +41,13 @@ public class LinkedList {
 
         }
 
-        public Appointment get(int pos){
+    /**
+     * retrieves the appointment at specified position in the linkedList
+     * @param pos the position of the appointment to retrieved
+     *@return the appointment at the specified position
+     * @throws IndexOutOfBoundsException if the
+     */
+    public Appointment get(int pos){
             if (pos < 0 || pos >= numOfElements){
                 throw new IndexOutOfBoundsException();
             }

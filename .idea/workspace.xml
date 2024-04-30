@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0087a472-aed8-4b10-be91-50f6405892f4" name="Changes" comment="Remove Method">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/BoundedPriorityQueue.java" afterDir="false" />
+    <list default="true" id="0087a472-aed8-4b10-be91-50f6405892f4" name="Changes" comment="BoundedQueue extends LinkedList &#10;constructor that takes max size and creates a queue of linkedLi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/BoundedPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/BoundedPriorityQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/LinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,7 @@
       <updated>1713797332904</updated>
       <workItem from="1713797334009" duration="5204000" />
       <workItem from="1714253995045" duration="7481000" />
-      <workItem from="1714478664124" duration="5366000" />
+      <workItem from="1714478664124" duration="7553000" />
     </task>
     <task id="LOCAL-00001" summary="GroupProject">
       <option name="closed" value="true" />
@@ -141,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714313921299</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="BoundedQueue extends LinkedList &#10;constructor that takes max size and creates a queue of linkedLi">
+      <option name="closed" value="true" />
+      <created>1714510704481</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714510704481</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +163,7 @@
     <MESSAGE value="Size method &#10;isEmpty method&#10;AddToStart method" />
     <MESSAGE value="get Method" />
     <MESSAGE value="Remove Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Method" />
+    <MESSAGE value="BoundedQueue extends LinkedList &#10;constructor that takes max size and creates a queue of linkedLi" />
+    <option name="LAST_COMMIT_MESSAGE" value="BoundedQueue extends LinkedList &#10;constructor that takes max size and creates a queue of linkedLi" />
   </component>
 </project>
