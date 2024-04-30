@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0087a472-aed8-4b10-be91-50f6405892f4" name="Changes" comment="isFull method to get if the queue is full&#10;isEmpty method to get if the queue is empty">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/NoElementFound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/BoundedPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ca2GroupProject/BoundedPriorityQueue.java" afterDir="false" />
-    </list>
+    <list default="true" id="0087a472-aed8-4b10-be91-50f6405892f4" name="Changes" comment="BoundedPriorityQueue class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +19,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AbdiGodone"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1d566f94-a5dc-472e-a648-718409b31e4e" />
+        <option name="url" value="https://github.com/AbdiGodone/CA2GroupProject.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -58,7 +68,7 @@
       <updated>1713797332904</updated>
       <workItem from="1713797334009" duration="5204000" />
       <workItem from="1714253995045" duration="7481000" />
-      <workItem from="1714478664124" duration="11035000" />
+      <workItem from="1714478664124" duration="11461000" />
     </task>
     <task id="LOCAL-00001" summary="GroupProject">
       <option name="closed" value="true" />
@@ -188,7 +198,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714514150419</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add method to add appointment to the queue&#10;peek method to get the first element">
+      <option name="closed" value="true" />
+      <created>1714515945525</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714515945525</updated>
+    </task>
+    <task id="LOCAL-00018" summary="BoundedPriorityQueue class">
+      <option name="closed" value="true" />
+      <created>1714516279369</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714516279369</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,9 +231,10 @@
     <MESSAGE value="Remove Method" />
     <MESSAGE value="BoundedQueue extends LinkedList &#10;constructor that takes max size and creates a queue of linkedLi" />
     <MESSAGE value="java docs" />
-    <MESSAGE value="BoundedPriorityQueue class" />
     <MESSAGE value="constructor that takes max size and initialize it" />
     <MESSAGE value="isFull method to get if the queue is full&#10;isEmpty method to get if the queue is empty" />
-    <option name="LAST_COMMIT_MESSAGE" value="isFull method to get if the queue is full&#10;isEmpty method to get if the queue is empty" />
+    <MESSAGE value="add method to add appointment to the queue&#10;peek method to get the first element" />
+    <MESSAGE value="BoundedPriorityQueue class" />
+    <option name="LAST_COMMIT_MESSAGE" value="BoundedPriorityQueue class" />
   </component>
 </project>
