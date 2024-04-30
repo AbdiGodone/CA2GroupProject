@@ -72,6 +72,24 @@ public class BoundedPriorityQueue extends LinkedList{
 
         }
 
+    /**
+     * adds the specified appointment to te queue if its possible
+     * @param appointment the appointment to be added t the queue
+     * @return true if appointment is added successfully, false if the queue is full, the appointment cannot be added
+     *
+     */
+    public boolean offer(Appointment appointment){
+    if (isFull()) {
+        return false;
+    }
+    if (queue.isEmpty()) {
+        queue.AddToStart(appointment);
+    }
+    if (!queue.get(0).getDoctorFullName().toLowerCase().equals(appointment.getDoctorFullName())) {
+        queue.AddToStart(appointment);
+    }
+    return true;
+}
 
     /**
      * removes and returns the first element in the queue
