@@ -41,6 +41,19 @@ public class BoundedPriorityQueue extends LinkedList{
             return queue.get(0);
         }
 
+    /**
+     * retrieves the appointment at the front of the queue
+     * @return appointment at the front of the queue
+     * @throws NoElementFound if the queue is empty
+     */
+    public Appointment element(){
+            if (queue.isEmpty()){
+               throw new  NoElementFound("the element found in the queue");
+            }
+            return queue.get(0);
+        }
+
+
         /**
          * adds an appointment to the queue if the queue is not full, not empty, or the first appointment in the queue is not the same doctor
          * @param appointment the appointment to be added to the queue
@@ -72,6 +85,18 @@ public class BoundedPriorityQueue extends LinkedList{
             Appointment deletedValue = peek();
             queue.Remove(0);
             return deletedValue;
+        }
+
+
+    /**
+     * retrieves and removes the appointment at the front of the queue
+     * @return the appointment removed from the front of the queue, or null if the queue is empty
+     */
+    public Appointment poll(){
+        if (queue.isEmpty()){
+            return null;
+        }
+        return queue.Remove(0);
         }
 
 
