@@ -30,6 +30,40 @@ public class BoundedPriorityQueue extends LinkedList{
     }
 
 
+    /**
+     *retrieves the first element in the boundedQueue, does not remove it
+     * @return the first element in the boundedPriorityQueue
+     */
+    public Appointment peek(){
+        if (queue.isEmpty()){
+            return null;
+        }
+        return queue.get(0);
+    }
+
+    /**
+     * adds an appointment to the queue if the queue is not full, not empty, or the first appointment in the queue is not the same doctor
+     * @param appointment the appointment to be added to the queue
+     * @throws IllegalArgumentException if the queue is full
+     */
+    public void add(Appointment appointment){
+        if (isFull()){
+            throw new IllegalArgumentException("the que is full cant be added");
+        }
+        if (queue.isEmpty()){
+            queue.AddToStart(appointment);
+        }
+        if (!queue.get(0).getDoctorFullName().toLowerCase().equals(appointment.getDoctorFullName())){
+            queue.AddToStart(appointment);
+        }
+
+    }
+
+
+
+
+
+
 
 
 }
