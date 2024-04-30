@@ -1,16 +1,27 @@
 package Ca2GroupProject;
 
 public class BoundedPriorityQueue extends LinkedList{
-    private LinkedList queue;
         private int maxSize;
 
 
-
-        public BoundedPriorityQueue(int maxSize){
+    /**
+     * constructs a boundedPriorityQueue with the specified maximum size
+     * @param maxSize the maximum number of elements the queue can hold
+     * @throws IllegalArgumentException if the specified maxsize is less than or equal to 0
+     */
+    public BoundedPriorityQueue(int maxSize){
             if (maxSize <= 0){
                 throw new IllegalArgumentException("the maxsize cannot be less 0 or equal to 0");
             }
             this.maxSize = maxSize;
+        }
+
+    /**
+     *returns the number of elements in the queue
+     * @return the number of elements in the queue
+     */
+    public int size(){
+            return super.size();
         }
 
         /**
@@ -35,10 +46,10 @@ public class BoundedPriorityQueue extends LinkedList{
          * @return the first element in the boundedPriorityQueue
          */
         public Appointment peek(){
-            if (queue.isEmpty()){
+            if (super.isEmpty()){
                 return null;
             }
-            return queue.get(0);
+            return super.get(0);
         }
 
     /**
@@ -47,10 +58,10 @@ public class BoundedPriorityQueue extends LinkedList{
      * @throws NoElementFound if the queue is empty
      */
     public Appointment element(){
-            if (queue.isEmpty()){
+            if (super.isEmpty()){
                throw new  NoElementFound("the element found in the queue");
             }
-            return queue.get(0);
+            return super.get(0);
         }
 
 
@@ -63,11 +74,11 @@ public class BoundedPriorityQueue extends LinkedList{
             if (isFull()){
                 throw new IllegalArgumentException("the que is full cant be added");
             }
-            if (queue.isEmpty()){
-                queue.AddToStart(appointment);
+            if (super.isEmpty()){
+                super.AddToStart(appointment);
             }
-            if (!queue.get(0).getDoctorFullName().toLowerCase().equals(appointment.getDoctorFullName())){
-                queue.AddToStart(appointment);
+            if (!peek().getDoctorFullName().toLowerCase().equals(appointment.getDoctorFullName())){
+                super.AddToStart(appointment);
             }
 
         }
@@ -82,11 +93,11 @@ public class BoundedPriorityQueue extends LinkedList{
     if (isFull()) {
         return false;
     }
-    if (queue.isEmpty()) {
-        queue.AddToStart(appointment);
+    if (super.isEmpty()) {
+        super.AddToStart(appointment);
     }
-    if (!queue.get(0).getDoctorFullName().toLowerCase().equals(appointment.getDoctorFullName())) {
-        queue.AddToStart(appointment);
+    if (!peek().getDoctorFullName().toLowerCase().equals(appointment.getDoctorFullName())) {
+        super.AddToStart(appointment);
     }
     return true;
 }
@@ -97,11 +108,11 @@ public class BoundedPriorityQueue extends LinkedList{
      * @throws NoElementFound if the que is empty
      */
     public Appointment remove(){
-            if (queue.isEmpty()){
+            if (super.isEmpty()){
                 throw  new NoElementFound("no element found to delete");
             }
             Appointment deletedValue = peek();
-            queue.Remove(0);
+            super.Remove(0);
             return deletedValue;
         }
 
@@ -111,10 +122,10 @@ public class BoundedPriorityQueue extends LinkedList{
      * @return the appointment removed from the front of the queue, or null if the queue is empty
      */
     public Appointment poll(){
-        if (queue.isEmpty()){
+        if (super.isEmpty()){
             return null;
         }
-        return queue.Remove(0);
+        return super.Remove(0);
         }
 
     /**
