@@ -18,6 +18,10 @@ public class LinkedList {
             return numOfElements == 0;
         }
 
+        public boolean isFull(){
+            return this.numOfElements ==
+        }
+
         public void AddToStart(Appointment data){
             Node node = new Node(data);
 
