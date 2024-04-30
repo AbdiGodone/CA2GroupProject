@@ -117,9 +117,14 @@ public class BoundedPriorityQueue extends LinkedList{
         return queue.Remove(0);
         }
 
-        @Override
+    /**
+     * overrides the get method from the LinkedList as you cant get specific position in a queue
+     * @param pos the position of the appointment to retrieved
+     * @return does not return value, throws UnsupportedOperationException
+     */
+    @Override
     public Appointment get(int pos){
-        throw new UnsupportedOperationException("getting specific position is not allowed ")
+        throw new UnsupportedOperationException("getting specific position is not allowed ");
         }
 }
 
