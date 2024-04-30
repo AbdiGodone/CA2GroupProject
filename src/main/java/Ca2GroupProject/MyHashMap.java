@@ -37,8 +37,6 @@ public class MyHashMap {
      * @param key the key of the patient to be removed from the hash map
      * @return the patient associated with the specified key, or null if the key is not found
      */
-
-
     public Patient remove(String key){
         int slot = calcSlot(key);
         if(map[slot] == null){
@@ -63,6 +61,30 @@ public class MyHashMap {
         }
         return null;
     }
+
+    /**
+     * Retrieves the patient associated with the specified key from the hash map.
+     * If the key is found in the hash map, the corresponding patient is returned.
+     * If the key is not found, returns null.
+     *
+     * @param key the key of the patient to be retrieved from the hash map
+     * @return the patient associated with the specified key, or null if the key is not found
+     */
+    public Patient get(String key){
+        int slot = calcSlot(key);
+        if(map[slot] == null){
+            return null;
+        }
+        Entry current = map[slot];
+        while(current != null){
+            if(current.key.equals(key)){
+                return current.value;
+            }
+            current = current.next;
+        }
+        return null;
+    }
+
 
 
 
